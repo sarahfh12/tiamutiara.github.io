@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cek jawaban</title>
+    <style>
+    body {
+    font-family:'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif; 
+    font-size: 10px;
+    color: rgb(22, 12, 114);
+    }
+    
+    table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+        margin-left: auto; margin-right: auto;
+        background-color: rgb(0, 17, 4);
+        color: rgb(223, 222, 233);
+
+    }
+    fieldset{
+        background-color: rgb(189, 207, 199);
+    margin: auto;
+    width: 230px;
+    height: 300px;
+    }
+    </style>
+    
+</head>
+<body>
+    <fieldset>
+        
+        <th><table border="1">
+        <td><b><center> Aplikasi Cek Jawaban </center></b></td>
+        </table></th>
+    <div id="app">
+        <div>
+        <label>skor :</label>
+        <input type="number" v-model="skor">
+    
+    </div> 
+    <div>
+        <label>kunci Jawaban :</label>
+        <input  v-model="kunciJawaban" maxlength="20">
+        <em> {{ kunciJawaban.length }} dari {{jumlahSoal}} </em>
+    </div>
+
+    <div>
+    <label>jawaban Siswa :</label>
+        <input  v-model="jawabanSiswa" maxlength="20">
+        <em>{{ jawabanSiswa.length }} dari {{ jumlahSoal }} </em>
+    </div>
+
+    <div>
+       <h1><u> hasil </u></h1>
+    <h4>benar: {{hasil.benar}}</h4>
+    <h4>salah: {{hasil.salah}}</h4>
+    <h4>nilai: {{hasil.nilai}}</h4>
+       </div>
+       <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+    </fieldset>
+</body>
+</html>
